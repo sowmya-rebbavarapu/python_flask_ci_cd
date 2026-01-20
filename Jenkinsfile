@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/ci-cd-flask-app.git'
+                git 'https://github.com/sowmya-rebbavarapu/python_flask_ci_cd.git'
             }
         }
 
