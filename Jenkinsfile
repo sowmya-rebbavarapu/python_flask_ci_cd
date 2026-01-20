@@ -9,10 +9,11 @@ pipeline {
         }
 
         stage('Build Docker Image') {
-            steps {
-                bat 'docker build -t flask-cicd-app:latest .'
-            }
-        }
+    steps {
+        bat 'docker build -t flask-cicd-app:latest -f docker/Dockerfile .'
+    }
+}
+
 
         stage('Deploy to Kubernetes') {
             steps {
