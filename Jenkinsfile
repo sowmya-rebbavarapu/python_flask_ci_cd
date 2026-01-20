@@ -1,11 +1,12 @@
 pipeline {
     agent any
 
-    stage('Clone Repository') {
-    steps {
-        git branch: 'main', url: 'https://github.com/sowmya-rebbavarapu/python_flask_ci_cd.git'
-    }
-}
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main', url: 'https://github.com/sowmya-rebbavarapu/python_flask_ci_cd.git'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
